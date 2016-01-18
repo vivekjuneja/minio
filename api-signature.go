@@ -92,7 +92,7 @@ func getSignedHeadersFromAuth(authHeaderValue string) ([]string, *probe.Error) {
 
 // verify if region value is valid.
 func isValidRegion(region string) *probe.Error {
-	if region != "us-east-1" && region != "US" {
+	if region != "us-east-1" && region != "US" && region != "generic" {
 		return probe.NewError(errInvalidRegion)
 	}
 	return nil
